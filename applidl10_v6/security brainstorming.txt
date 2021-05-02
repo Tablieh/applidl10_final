@@ -1,0 +1,13 @@
+
+
+/---
+condition d'accès (par rapport au role) dans les contrôleurs
+sécurité, etc...
+
+/---AXE D'AMELIORATION
+captcha
+forgot password
+remember_me
+send email confirmation
+save cart
+RGPD

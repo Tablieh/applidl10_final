@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+#msg{
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success{
+    background-color: rgb(148, 243, 135);
+    color:rgb(24, 37, 22);
+}
+
+.error{
+    background-color: rgb(255, 120, 131);
+    color:rgb(82, 15, 24);
+}
+
+#product-list .card{
+    min-width: 300px;
+}
+
+.card-product{
+    margin: 1em;
+}

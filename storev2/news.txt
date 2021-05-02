@@ -1,0 +1,29 @@
+[11:57] Virgile GIBELLO - Elan Formation
+    
+AUTOLOAD + NAMESPACES -> réorganisation des dossiers
+
+
+SECURITE : XSS, INJECTION SQL, CSRF PROTECTION
+
+
+une clé secrète propre à l'application
+une clé hashée en SESSION (propre à la session ouverte par un utilisateur)
+POUR CHAQUE REQUETE vers index.php, générer un token (jeton) avec cette clé hashée
+mettre ce token en champ caché dans le formulaire
+
+
+CSRF protection :
+- method http DOIT ETRE POST
+- vérifier que POST["csrf_token"] existe !
+- vérifier l'equivalence des hash (hash_equals) entre la clé SESSION et le token du form
+-> si OK, on continue, sinon DECONNEXION, INVALID TOKEN (regénère une nouvelle clé en SESSION) et on redirige l'utilisateur vers une page SAFE (genre l'accueil)
+
+
+COUCHE MODEL : gestion des clés étrangères
+
+
+INTERFACES : ManagerInterface et EntityInterface
+sert à obliger les classes qui implémentent ses interfaces à respecter les méthodes OBLIGATOIRES à déclarer !!!
+
+
+ET BIEN SUR : config.php qui contient les valeurs d'environnement de l'application, comme le host de la base de données, les chemins des images, des styles, etc
